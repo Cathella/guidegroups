@@ -35,3 +35,8 @@ p {
 footer a {
   font-size: 1em;
 }
+
+.bg-image01 {
+  background-image: url("img/bg2.jpg");
+  background-size: cover;
+}
