@@ -4,14 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guide Group</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- <nav class="border-bottom py-3 shadow">
-  </nav> -->
-
   <nav class="navbar navbar-expand-md navbar-light border-bottom py-3 shadow">
     <div class="container">
       <div class="logo">
@@ -24,12 +21,30 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ml-auto">
-          <a href="#" class="nav-item nav-link mr-4">Informace pro</a>
+          <div class="dropdown mr-1">
+            <a href="#" class="nav-item nav-link mr-4 dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+              Informace pro
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+              <a class="dropdown-item" href="#">Studenty</a>
+              <a class="dropdown-item" href="#">Průvodce a delegáty</a>
+              <a class="dropdown-item" href="#">Cestovní kanceláře a agentury</a>
+              <a class="dropdown-item" href="#">Kulturní objekty</a>
+            </div>
+          </div>
           <a href="#" class="nav-item nav-link mr-4">Certifikace</a>
           <a href="#" class="nav-item nav-link mr-4">FAQ</a>
           <a href="#" class="nav-item nav-link mr-4">Blog</a>
           <a href="#" class="nav-item nav-link mr-4">Kontakt</a>
-          <a href="#" class="nav-item nav-link mr-4">Profil</a>
+          <div class="dropdown mr-1">
+            <a href="#" style="font-size: 1em;" class="btn dark-bg text-white shadow px-3 dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+              <i class="fas fa-user mr-2"></i>Profil
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+              <a class="dropdown-item" href="#">Přihlásit</a>
+              <a class="dropdown-item" href="#">Registrovat</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -42,7 +57,7 @@
           <h1 class="text-lowercase mt-5 pt-5 font-weight-bold">
             ONLINE NÁSTROJ PRO SPOLUPRÁCI PRŮVODCŮ A STUDENTŮ S CESTOVNÍMI KANCELÁŘEMI A KULTURNÍMI OBJEKTY
           </h1>
-          <a href="#" class="btn orange-bg text-white py-3 px-5 mt-3 shadow rounded-0 mt-4">Registrovat</a>
+          <a href="#" class="btn orange-bg text-white font-weight-bold py-3 px-5 mt-3 shadow rounded-0 mt-4">Registrovat</a>
         </div>
   
         <div class="col-lg-7 pb-5">
@@ -167,19 +182,25 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="orange-bg text-white p-5">
-            <h2 class="mx-4 mb-4 mt-3">You are<br>not a member?</h2>
+            <h2 class="mx-4 mb-4 mt-3 font-weight-bold">You are<br>not a member?</h2>
             <p class="mx-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nam debitis quidem pariatur rem sint natus maiores voluptates! Officiis ex reprehenderit atque fuga et quae dolores quo doloribus nesciunt aspernatur.
             </p>
-            <div class="mx-4 d-flex justify-content-between" style="margin: 7.3em 0 2.5em 0;">
-              <a href="#" class="btn bg-white py-3 px-5 rounded-0 text-orange">Přihlásit</a>
-              <a href="#" class="btn bg-orange py-3 px-5 rounded-0 text-white" style="border: 1px solid white">Registrovat</a>
+            <div class="mx-4" style="margin: 7.3em 0 2.5em 0;">
+              <div class="row">
+                <div class="col-lg-6">
+                  <a href="#" class="btn bg-white py-3 rounded-0 w-100 text-orange font-weight-bold">Přihlásit</a>
+                </div>
+                <div class="col-lg-6">
+                  <a href="#" class="btn bg-orange py-3 rounded-0 w-100 text-white font-weight-bold" style="border: 1px solid white">Registrovat</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="dark-bg text-white p-5">
-            <h2 class="mx-4 mb-4 mt-3">Subscribe to<br>secret discounts</h2>
+            <h2 class="mx-4 mb-4 mt-3 font-weight-bold">Subscribe to<br>secret discounts</h2>
             <p class="mx-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nam debitis quidem pariatur rem sint natus maiores voluptates! Officiis ex reprehenderit atque fuga.
             </p>
@@ -188,7 +209,9 @@
             </p>
             <form action="#" class="mx-4 mt-5">
               <input type="email" name="email" placeholder="Enter your email" class="bg-white border py-3 pl-3 w-100">
-              <button type="submit" class="btn px-4 rounded-0 text-orange" style="position: relative; top: -51px; left: 265px; border-left: 1px solid #ddd;">Subscribe</button>
+              <button type="submit" class="btn px-4 rounded-0 text-orange font-weight-bold" style="position: relative; top: -51px; left: 320px;">
+                <i class="fas fa-arrow-right"></i>
+              </button>
             </form>
           </div>
         </div>
@@ -214,7 +237,7 @@
         <div class="col-lg-7">
           <div class="row">
             <div class="col-lg-3">
-              <p class="text-uppercase">Company</p>
+              <p class="text-uppercase f-label font-weight-bold">Company</p>
               <div class="d-flex flex-column">
                 <a href="#" class="mb-3 text-muted">Blog</a>
                 <a href="#" class="mb-3 text-muted">FAQs</a>
@@ -224,7 +247,7 @@
               </div>
             </div>
             <div class="col-lg-5">
-              <p class="text-uppercase">About</p>
+              <p class="text-uppercase f-label font-weight-bold">About</p>
               <div class="d-flex flex-column">
                 <a href="#" class="mb-3 text-muted">ZÁSADY OCHRANY OÚ</a>
                 <a href="#" class="mb-3 text-muted">VOP PRO POSKYTOVATELE</a>
@@ -233,7 +256,7 @@
               </div>
             </div>
             <div class="col-lg-4">
-              <p class="text-uppercase">Contact</p>
+              <p class="text-uppercase f-label font-weight-bold">Contact</p>
               <div class="d-flex flex-column">
                 <a href="#" class="mb-3 text-muted">podpora@guidegroup.cz</a>
                 <a href="#" class="mb-3 text-muted">obchod@guidegroup.cz</a>
@@ -257,6 +280,10 @@
       </div>
     </div>
   </footer>
+
+  <script src="jquery.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <script src="bootstrap.bundle.min.js"></script>
 
 	<script
 		src="https://kit.fontawesome.com/7290f27402.js"
