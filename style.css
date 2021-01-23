@@ -41,7 +41,17 @@ footer a {
   background-size: cover;
 }
 
+.bg-intro {
+  background-image: url("img/intro.jpeg");
+  background-size: cover;
+}
+
 .f-label {
   font-size: .9em;
   color: #162d4d;
+}
+
+.secondary-h1 {
+  font-size: 28px;
+  line-height: 1.5;
 }
